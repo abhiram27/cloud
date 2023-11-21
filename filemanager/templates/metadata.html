@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metadata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .metadata {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #4caf50;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="metadata">
+        <h1>Metadata</h1>
+        <p>Name: {{ metadata.name }} KB</p>
+        <p>Filename: {{ metadata.filename }}</p>
+        <p>Size: {{ metadata.size }} KB</p>
+        <p>Width: {{ metadata.width }} px</p>
+        <p>Height: {{ metadata.height }} px</p>
+        <a href="{% url 'home' 1 %}" class="back">Back</a>
+    </div>
+</body>
+</html>
